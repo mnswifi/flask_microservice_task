@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 .terraform/
 .git/
 
+=======
+>>>>>>> 9a878f46a6febe5e5f156b11c125188bdf4163ca
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
