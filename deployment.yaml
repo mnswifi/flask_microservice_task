@@ -1,9 +1,9 @@
-apiVersion: apps/v1
+apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: flask_eks_app
 spec:
-  replicas: 3 
+  replicas: 1 
   selector:
     matchLabels:
       app: flask_eks_app
@@ -16,4 +16,11 @@ spec:
       - name: flask_eks_app
         image: 851725544255.dkr.ecr.us-east-1.amazonaws.com/flask_eks_docker_image:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 3000
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 100m
+              memory: 256Mi
