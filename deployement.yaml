@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask_eks_app
+spec:
+  replicas: 3 
+  selector:
+    matchLabels:
+      app: flask_eks_app
+  template:
+    metadata:
+      labels:
+        app: flask_eks_app
+    spec:
+      containers:
+      - name: flask_eks_app
+        image: 851725544255.dkr.ecr.us-east-1.amazonaws.com/flask_eks_docker_image:latest
+        ports:
+        - containerPort: 5000
