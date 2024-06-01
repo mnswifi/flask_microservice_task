@@ -8,7 +8,7 @@ terraform {
 }
 
 backend "s3" {
-    bucket = "flask_eks_task_tfstate"
+    bucket = "flask-eks-task-tfstate"
     key = "state/terraform.tfstate"
     region = "us-east-1"
     encrypt = true
