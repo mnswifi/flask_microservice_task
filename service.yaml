@@ -1,3 +1,15 @@
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: flask-app
+# spec:
+#   type: LoadBalancer
+#   ports:
+#   - port: 80
+#     targetPort: 5000
+#   selector:
+#     app: flask-app
+
 # flask-app-service.yaml
 
 # apiVersion: v1
@@ -24,3 +36,16 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 3000
+
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: flask-api-backend-service
+# spec:
+#   type: NodePort
+#   selector:
+#     app: web
+#   ports:
+#     - nodePort: 31479
+#       port: 8080
+#       targetPort: 5000
