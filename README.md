@@ -2,11 +2,11 @@
 
 # Main.tf File
 
-This repository contains the `main.tf` file, which is a part of the infrastructure provisioning code for flask_app_microservice.
+This repository contains the `main.tf` file, which is a part of the infrastructure provisioning code for **flask_app_microservice**.
 
 ## Description
 
-The `main.tf` file is written in HashiCorp Configuration Language (HCL) and is used with Terraform to define and provision the infrastructure required for deploying flask_app_microservice on AWS.
+The `main.tf` file is written in HashiCorp Configuration Language (HCL) and is used with Terraform to define and provision the infrastructure required for deploying **flask_app_microservice** on **AWS**.
 
 ## Contents
 
