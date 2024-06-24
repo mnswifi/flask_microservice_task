@@ -119,7 +119,7 @@ resource "aws_eks_node_group" "public_workers" {
         min_size     = 2
     }
 
-    instance_types  = ["t3.small"]
+    instance_types  = ["t2.micro"]
     ami_type        = "AL2_x86_64"
     disk_size       = 20
 
@@ -142,7 +142,7 @@ resource "aws_eks_node_group" "private_workers" {
         min_size     = 1
     }
 
-    instance_types  = ["t3.small"]
+    instance_types  = ["t2.micro"]
     ami_type        = "AL2_x86_64"
     capacity_type   = "ON_DEMAND"
     disk_size       = 20
