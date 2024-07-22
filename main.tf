@@ -6,6 +6,7 @@ resource "aws_ecr_repository" "flask_eks_docker_image" {
     name = "flask_eks_docker_image"
 }
 
+
 resource "aws_vpc" "flask_eks_vpc" {
     cidr_block           = var.vpc_block
     enable_dns_hostnames = true
@@ -20,7 +21,6 @@ resource "aws_internet_gateway" "gw" {
 
 resource "aws_route_table" "flask_pub_rt" {
     vpc_id = aws_vpc.flask_eks_vpc.id
-
     tags = { Name = "Public Route Table" }
 }
 
@@ -99,7 +99,7 @@ resource "aws_eks_cluster" "flask_app_eks_cluster" {
 
     vpc_config {
         subnet_ids         = concat(aws_subnet.public_subnets[*].id, aws_subnet.private_subnets[*].id)
-        security_group_ids = [aws_security_group.control_plane_sg.id]
+        security_group_ids = [aws_security_group.node_sg]
         endpoint_public_access = true
         endpoint_private_access = true
     }
