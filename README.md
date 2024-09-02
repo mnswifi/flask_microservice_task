@@ -50,12 +50,3 @@ To deploy this project the following are required.
 - ECR
 - S3 AND DYNAMODB (for terraform statefile tracking)
 
-```markdown
-# Testing codes
-## test 2
-### test 3
-```
-```bash
-test.tf
-```
-
