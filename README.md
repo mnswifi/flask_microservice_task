@@ -49,5 +49,7 @@ To deploy this project the following are required.
 - EKS
 - ECR
 - S3 AND DYNAMODB (for terraform statefile tracking)
-
+```bash
+test.tf
+```
 
