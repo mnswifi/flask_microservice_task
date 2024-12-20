@@ -34,7 +34,7 @@ Contributions are welcome! If you find any issues or want to contribute to the i
 
 ## License
 
-This `main.tf` file is distributed under the [MIT License](LICENSE).
+This `main.tf` file is distributed under the [\\\](--).
 
 
 ## Deployment
